@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+/* font-family: 'Uchen', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+/* font-family: 'Source Code Pro', monospace; */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("Back.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#board{
+    width: 90vmin;
+    height: 90vmin;
+    border: 2px solid black;
+    background:linear-gradient(rgb(245, 203, 126),rgb(240, 240, 78));
+    display: grid;
+    grid-template-columns: repeat(25,1fr);
+    grid-template-rows: repeat(25,1fr);
+    grid-row: 1/10;
+}
+
+#Start{
+    width: 7vw;
+    height: 2vw;
+    border: 2px solid red;
+    background-color: wheat;
+    font-family: 'Uchen', serif;
+}
+
+.Food{
+    background-color: chartreuse;
+    border: 2px solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+}
+
+.Head{
+    background: linear-gradient(red,rgb(243, 154, 53));
+    border-radius: .2rem/.2rem;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+.Body{
+    background-color: purple;
+    border-radius: .4rem/.4rem;
+    box-sizing: border-box;
+    border: 2px solid black;
+}
+
+#Score{
+    position:absolute;
+    top: 20px;
+    right: 100px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2rem;
+}
+
+#Hs{
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 2rem;
+}
+
+@media  screen and (max-width:1000px) {
+    #Score{
+        font-size: 1rem;
+    }    
+    #Hs{
+        font-size: 1rem;
+    }
+}
+
+@media  screen and (max-width:810px) {
+    #Score{
+        top: 0;
+        right: 1px;
+    }    
+    #Hs{
+        top: 60px;
+        right: 1px;
+    }
+}
